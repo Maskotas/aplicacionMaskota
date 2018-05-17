@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="bo.com.innovasoft.maskotas.Login">
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center"
+        android:src="@drawable/logo"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/logo_empresa" />
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="@string/correo"
+        android:inputType="textEmailAddress"
+        android:layout_marginTop="17dp"
+        android:id="@+id/editText2"
+        android:layout_below="@+id/imageView"
+        android:layout_alignStart="@+id/editText" />
+    <EditText
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:id="@+id/editText"
+        android:layout_marginTop="19dp"
+        android:layout_below="@+id/editText2"
+        android:layout_centerHorizontal="true" />
+
+
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:text="@string/iniciar_sesion"
+        android:layout_marginStart="12dp"
+        android:id="@+id/button3"
+        android:layout_marginTop="20dp"
+        android:layout_below="@+id/editText"
+        android:layout_alignStart="@+id/editText"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"/>
+
+    <Button
+        android:id="@+id/btncrearcuenta"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/crear_cuenta"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_alignTop="@+id/button3"
+        android:layout_alignEnd="@+id/editText" />
+
+</RelativeLayout>

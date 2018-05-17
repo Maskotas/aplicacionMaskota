@@ -1,0 +1,108 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="bo.com.innovasoft.maskotas.Crear_Cuenta">
+
+    <ImageView
+        android:id="@+id/fotousuario"
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        app:srcCompat="@drawable/usuario"
+        android:contentDescription="@string/fotousuario"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:hint="@string/nombre"
+        android:inputType="textPersonName"
+        android:id="@+id/txtNombre"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_above="@+id/txtapellido"
+        android:layout_centerHorizontal="true" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:hint="@string/apellido"
+        android:inputType="textPersonName"
+        android:id="@+id/txtapellido"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_above="@+id/txtcorreo"
+        android:layout_alignStart="@+id/txtNombre" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:hint="@string/correo"
+        android:inputType="textEmailAddress"
+        android:id="@+id/txtcorreo"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_above="@+id/txtcontra"
+        android:layout_alignStart="@+id/txtapellido" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:hint="@string/password"
+        android:inputType="textPassword"
+        android:id="@+id/txtcontra"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_above="@+id/txtconfirmar"
+        android:layout_alignStart="@+id/txtcorreo" />
+
+    <EditText
+        android:layout_width="300dp"
+        android:layout_gravity="center"
+        android:hint="@string/confirmar_password"
+        android:inputType="textPassword"
+        android:id="@+id/txtconfirmar"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:layout_above="@+id/btncrearcuenta"
+        android:layout_alignStart="@+id/txtcontra" />
+
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:text="@string/crear_cuenta"
+        android:layout_marginStart="12dp"
+        android:id="@+id/btncrearcuenta"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_alignParentBottom="true"
+        android:layout_alignStart="@+id/txtconfirmar"
+        android:layout_marginBottom="19dp" />
+
+    <Button
+        android:layout_gravity="center_horizontal"
+        android:layout_width="wrap_content"
+        android:layout_height="46dp"
+        android:text="@string/cuentamascota"
+        android:id="@+id/btnmascota"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_alignBaseline="@+id/btncrearcuenta"
+        android:layout_alignBottom="@+id/btncrearcuenta"
+        android:layout_alignEnd="@+id/txtconfirmar" />
+
+    <Button
+        android:id="@+id/btncargar"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        android:onClick="onclick"
+        android:text="@string/cargarimagen"
+        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+        android:layout_above="@+id/txtapellido"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="11dp" />
+
+</RelativeLayout>
