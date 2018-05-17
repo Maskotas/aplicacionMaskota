@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/Maskotas.iml" filepath="$PROJECT_DIR$/Maskotas.iml" />
+      <module fileurl="file://$PROJECT_DIR$/aplicacionMaskota.iml" filepath="$PROJECT_DIR$/aplicacionMaskota.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
     </modules>
   </component>
