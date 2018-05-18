@@ -57,6 +57,8 @@ public class Crear_Cuenta extends AppCompatActivity {
             botonCargar.setEnabled(false);
         }
     }
+/* APARTIR DE ANDROID N SE TIENE QUE PEDIR PERMISO PARA UTLIZAR LOS SERVICIOS
+CODIGO PARA PEDIR PERMISOS PARA LEER LA CAMARA Y LA MEMORIA EXTERNA */
 
     private boolean validaPermisos() {
         if (Build.VERSION.SDK_INT<Build.VERSION_CODES.M){
@@ -77,7 +79,7 @@ public class Crear_Cuenta extends AppCompatActivity {
 
         return false;
     }
-
+/*INICIO PARA PEDIR PERMISOS MANUAL DESPUES DE QUE EL USUARIO RECHAZA LOS MISMOS*/
     @Override
     public void onRequestPermissionsResult(int requestCode, @NonNull String[] permissions, @NonNull int[] grantResults) {
         super.onRequestPermissionsResult(requestCode, permissions, grantResults);
@@ -94,9 +96,7 @@ public class Crear_Cuenta extends AppCompatActivity {
         }
     }
 
-    /***********************************************
-     INICIOGUARDLOSUUSUAIORETC
-     ***********************************************/
+
     private void solicitarPermisoManual() {
 
         final CharSequence[] opciones={"Si","No"};
@@ -123,10 +123,10 @@ public class Crear_Cuenta extends AppCompatActivity {
 
         });
         alertOpciones.show();
-
-
     }
+//FIN PERMISO MANUAL
 
+    /*INICIO PARA CARGAR DIALOGO PARA PEDIR PERMISOS PARA QUE FUNCIONE LA APP*/
     private void cargarDialogoRecomendacion() {
 
         AlertDialog.Builder dialogo=new AlertDialog.Builder(Crear_Cuenta.this);
@@ -146,7 +146,7 @@ public class Crear_Cuenta extends AppCompatActivity {
         dialogo.show();
 
     }
-
+/*FIN DE DIALOGO*/
     public void onclick(View view) {
         cargarimagen();
     }
@@ -179,7 +179,7 @@ public class Crear_Cuenta extends AppCompatActivity {
         });
         alertOpciones.show();
     }
-
+/*INICIO PARA PODER UTILIZAR LA CAMARA */
     private void tomarFotografia() {
         File fileImagen = new File(Environment.getExternalStorageDirectory(),RUTA_IMAGEN);
         boolean iscreada = fileImagen.exists();
@@ -192,16 +192,17 @@ public class Crear_Cuenta extends AppCompatActivity {
             nombreImagen=(System.currentTimeMillis()/100)+".jpg";
         }
          path = Environment.getExternalStorageDirectory()+File.separator+RUTA_IMAGEN+File.separator+nombreImagen;
-        //solucionador de la camara
+        //CONSTRUCTOR PARA DETECTAR FALLAS
         StrictMode.VmPolicy.Builder builder = new StrictMode.VmPolicy.Builder();
         StrictMode.setVmPolicy(builder.build());
+        // FIN DE CONSTRUCTOR
           File imagen = new File(path);
 
         Intent intent=new Intent(MediaStore.ACTION_IMAGE_CAPTURE);
         intent.putExtra(MediaStore.EXTRA_OUTPUT, Uri.fromFile(imagen));
         startActivityForResult(intent,COD_FOTO);
     }
-
+/*fIN DE CODIGO PARA UTILIZAR LA CAMARA*/
     @Override
     protected void onActivityResult(int requestCode, int resultCode, Intent data) {
         super.onActivityResult(requestCode, resultCode, data);
@@ -224,8 +225,6 @@ public class Crear_Cuenta extends AppCompatActivity {
                  break;
 
             }
-
-
         }
     }
 }
