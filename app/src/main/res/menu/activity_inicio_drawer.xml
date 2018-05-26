@@ -5,23 +5,31 @@
 
     <group android:checkableBehavior="single">
         <item
-            android:id="@+id/nav_camera"
-            android:icon="@drawable/ic_menu_camera"
-            android:title="Import" />
+            android:id="@+id/nav_inicio"
+            android:icon="@drawable/inicio"
+            android:title="Inicio" />
         <item
-            android:id="@+id/nav_gallery"
-            android:icon="@drawable/ic_menu_gallery"
-            android:title="Gallery" />
+            android:id="@+id/nav_cuenta"
+            android:icon="@drawable/micuenta"
+            android:title="Mi Cuenta" />
         <item
-            android:id="@+id/nav_slideshow"
-            android:icon="@drawable/ic_menu_slideshow"
-            android:title="Slideshow" />
+            android:id="@+id/nav_mapa_veterinarios"
+            android:icon="@drawable/mapa"
+            android:title="Mapa Veterinarios" />
         <item
-            android:id="@+id/nav_manage"
-            android:icon="@drawable/ic_menu_manage"
-            android:title="Tools" />
+            android:id="@+id/nav_perdi_mascota"
+            android:icon="@drawable/perdimascota"
+            android:title="Perdi a Mi Mascota" />
+        <item
+            android:id="@+id/nav_adopciones"
+            android:icon="@drawable/adopciones"
+            android:title="Adopciones" />
+        <item
+            android:id="@+id/nav_contactos"
+            android:icon="@drawable/contactos"
+            android:title="Contactos" />
     </group>
-
+<!--
     <item android:title="Communicate">
         <menu>
             <item
@@ -34,5 +42,5 @@
                 android:title="Send" />
         </menu>
     </item>
-
+-->
 </menu>
