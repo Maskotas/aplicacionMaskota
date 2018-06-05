@@ -23,6 +23,7 @@
         style="@style/Widget.AppCompat.Button.Borderless.Colored"
         android:layout_marginTop="121dp"
         android:hint="@string/cargarimagen"
+        android:onClick="onclick"
         android:layout_alignTop="@+id/fotomascota"
         android:layout_centerHorizontal="true"
         />
