@@ -6,9 +6,9 @@ import android.content.pm.PackageManager;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.media.MediaScannerConnection;
-import android.media.audiofx.BassBoost;
 import android.net.Uri;
 import android.os.Build;
+import android.os.Bundle;
 import android.os.Environment;
 import android.os.StrictMode;
 import android.provider.MediaStore;
@@ -17,16 +17,13 @@ import android.support.annotation.NonNull;
 import android.support.annotation.RequiresApi;
 import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
-import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
 import android.widget.Button;
 import android.widget.ImageView;
-import android.widget.Switch;
 import android.widget.Toast;
 
 import java.io.File;
-import java.net.URI;
 
 import static android.Manifest.permission.CAMERA;
 import static android.Manifest.permission.WRITE_EXTERNAL_STORAGE;
@@ -44,10 +41,26 @@ public class Crear_Cuenta extends AppCompatActivity {
     String path;
 
 
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_crear__cuenta);
+//desde aqui hasta
+        Button siguiente = (Button) findViewById(R.id.btnmascota);
+        siguiente.setOnClickListener(new View.OnClickListener(){
+
+            @Override
+            public void onClick(View v) {
+
+                //CODIGO PARA QUE PASE A LA SIGUIENTE PANTALLA Y ASI MISMO NO PUEDA RETORNAR
+                Intent siguiente=new Intent(Crear_Cuenta.this, Crear_Mascotas.class);
+                startActivity(siguiente);
+
+            }
+        });//aqui es para poder pasar de pantalla
+
+
         imagen=(ImageView) findViewById(R.id.fotousuario);
         botonCargar=(Button)findViewById(R.id.btncargar);
 
@@ -227,4 +240,8 @@ CODIGO PARA PEDIR PERMISOS PARA LEER LA CAMARA Y LA MEMORIA EXTERNA */
             }
         }
     }
+
+
+
+
 }

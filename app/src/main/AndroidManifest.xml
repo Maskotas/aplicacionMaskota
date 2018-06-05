@@ -20,8 +20,8 @@
             </intent-filter>
         </activity>
         <activity android:name=".Crear_Cuenta" />
-        <activity android:name=".Login"></activity>
-        <activity android:name=".Crear_Mascota"></activity>
+        <activity android:name=".Login" />
+        <activity android:name=".Crear_Mascotas" />
     </application>
 
 </manifest>
