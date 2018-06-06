@@ -13,6 +13,15 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity android:name=".SplashScreen">
+
+        </activity>
+        <activity android:name=".Crear_Cuenta" />
+        <activity android:name=".Login" />
+        <activity android:name=".Crear_Mascota" />
+        <activity
+            android:name=".inicio"
+            android:label="@string/title_activity_inicio"
+            android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 
