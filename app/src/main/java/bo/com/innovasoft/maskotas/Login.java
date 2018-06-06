@@ -21,7 +21,7 @@ public class Login extends AppCompatActivity {
             @Override
             public void onClick(View v) {
 
-                //
+                //CODIGO PARA QUE PASE A LA SIGUIENTE PANTALLA Y ASI MISMO NO PUEDA RETORNAR
                 Intent siguiente=new Intent(Login.this, Crear_Cuenta.class);
                 startActivity(siguiente);
                 finish();

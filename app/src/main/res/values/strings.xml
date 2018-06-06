@@ -12,8 +12,10 @@
     <string name="nombre">Nombre</string>
     <string name="apellido">Apellido</string>
     <string name="fotousuario">foto usuario</string>
+    <string name="fotomascota">Foto Mascota</string>
     <string name="cuentamascota">Añadir Mascota</string>
     <string name="cargarimagen">Subir Imagen</string>
+  <!-- TODO: NAVIGATION DRAWER -->
     <string name="title_activity_inicio">inicio</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
@@ -21,7 +23,15 @@
     <string name="nav_header_subtitle">android.studio@android.com</string>
     <string name="nav_header_desc">Navigation header</string>
     <string name="action_settings">Settings</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
     <string name="hello_blank_fragment">Hello blank fragment</string>
+  <!-- FIN TODO: NAVIGATION DRAWER-->
+    <string name="nombremascoa">Nombre de tu mascota</string>
+    <string name="Perro">Perro</string>
+    <string name="Gato">Gato</string>
+    <string name="Raza">Raza</string>
+    <string name="FechaNacimiento">Fecha de Nacimiento</string>
+    <string name="title_activity_menu">Menu</string>
+    <string name="Esterilizado">Esterilizado</string>
+    <string name="DatosdeVeterinario">Datos de veterinario</string>
+    <string name="guardar" translatable="false">Guardar</string>
 </resources>
