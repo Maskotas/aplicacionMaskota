@@ -1,5 +1,10 @@
-package bo.com.innovasoft.maskotas;
 
+package bo.com.innovasoft.maskotas;
+//Librerias para manejo de fragments
+import android.app.FragmentManager;
+import android.app.FragmentTransaction;
+//fin de librerias de manejo de fragments
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
 import android.support.design.widget.Snackbar;
@@ -14,7 +19,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 
 public class inicio extends AppCompatActivity
-        implements NavigationView.OnNavigationItemSelectedListener {
+        implements NavigationView.OnNavigationItemSelectedListener, mapa_veterinarios.OnFragmentInteractionListener {
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -79,15 +84,21 @@ public class inicio extends AppCompatActivity
     @SuppressWarnings("StatementWithEmptyBody")
     @Override
     public boolean onNavigationItemSelected(MenuItem item) {
-        // Handle navigation view item clicks here.
+        // MENU DE NAVEGACION.
         int id = item.getItemId();
-
+        //FUNCIONES PARA USO DE FRAGMENTS
+        FragmentManager fragmentManager = getFragmentManager();
+        FragmentTransaction fragmentTransaction = fragmentManager.beginTransaction();
+        //FIN FUNCIONES PARA USO DE FRAGMENTS
         if (id == R.id.nav_inicio) {
             // Handle the camera action
         } else if (id == R.id.nav_cuenta) {
 
         } else if (id == R.id.nav_mapa_veterinarios) {
-
+            //AL PULSAR LA OPCION MAPA VETERINARIOS  CARGARA EL FRAGMENT CORRESPONDIENTE
+            mapa_veterinarios fragment = new mapa_veterinarios();
+            fragmentTransaction.add(R.id.fragment_container, fragment);
+            fragmentTransaction.commit();
         } else if (id == R.id.nav_perdi_mascota) {
 
         } else if (id == R.id.nav_adopciones) {
@@ -99,5 +110,10 @@ public class inicio extends AppCompatActivity
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.closeDrawer(GravityCompat.START);
         return true;
+    }
+
+    @Override
+    public void onFragmentInteraction(Uri uri) {
+
     }
 }
